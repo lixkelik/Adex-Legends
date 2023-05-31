@@ -1,0 +1,1079 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&family=Bungee&display=swap');
+
+:root{
+    --red: #E1262D;
+    --black: #2E2E2E;
+    --grey: #4A4A4A;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Blinker', sans-serif;
+    font-family: 'Bungee', cursive;
+    
+}
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--red);
+    border-radius: .5rem;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: .8rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    opacity: 85%;
+    box-shadow: 0 20px 10px rgba(0,0,0, .2);
+}
+
+.btn:hover{
+    opacity: 100%;
+    transform: translateY(-2%);
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: 0.6s;
+    padding: 35px 50px;
+    background-color: #2e2e2e;
+    z-index: 100000;
+
+}
+
+.navbar.sticky{
+    padding: 20px 50px;
+    box-shadow: 0 10px 10px rgba(0,0,0, .3);
+}
+
+.navbar .logo{
+    position: relative;
+    margin-right: 60px;
+    width: 120px;
+    
+}
+
+.navbar ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li{
+    position: relative;
+    list-style-type: none;
+}
+
+.navbar ul li a{
+    position: relative;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500px;
+    transition: 0.6s;
+    font-size: 25px;
+}
+
+.navbar ul li a:hover{
+    color: #ca3440;
+}
+
+.navbar-toggle{
+    display: none;
+    color: #fff;
+    
+}
+
+.navbar .current{
+    color: var(--red);
+}
+
+.banner{
+    padding-top: 105px;
+    display: flex;
+    width: 100%;
+    background: url(image/home/home-head-bg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    justify-content: right;
+    overflow-x: hidden;
+}
+
+.banner div{
+    text-align: center;
+    width: 420px;
+    margin: 120px;
+}
+
+.banner div p{
+    font-family: blinker;
+    color: #ffffff;
+    font-size: 2vw;
+    padding-top: 1rem;
+}
+
+.banner div img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.fav-legends{
+    margin-top: 7px;
+    display: flex;
+    width: 100%;
+
+    background: url(image/home/popular-hero.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+.fav-legends div{
+    width: 500px;
+    margin: 85px;
+}
+
+.fav-legends #title{
+    font-size: 4vw;
+    line-height: 110%;
+    color: white;
+}
+
+.fav-legends #desc{
+    font-family: blinker;
+    color: white;
+    font-size: 1.5vw;
+    margin-top: 20px;
+}
+
+.trailer{
+    position: relative;
+    background: url(image/home/trailer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+.trailer div{
+    padding: 10rem;
+    padding-top: 0rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.trailer p{
+    font-size:5vw;
+    color: #4a4a4a;
+}
+
+.trailer .vid-container{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+    
+}
+
+.trailer .vid-container::before {
+    padding-top: 56.25%;
+    display:block;
+    content: "";
+    box-sizing: border-box;
+}
+
+.trailer .vid-container iframe{
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.latest-news{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    align-items: start;
+}
+
+
+.grid-items{
+    background-color: var(--grey);
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.grid-items:hover{
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+    
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    
+}
+
+.card-content{
+    padding: 3rem;
+    padding-top: 2rem;
+}
+
+.card-date{
+    color: var(--red);
+    font-size: 1rem;
+}
+
+.card-header{
+    line-height: 130%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.card-text{
+    font-family: blinker;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    height: 96px;
+}
+
+.register-now{
+    background: url(image/home/bottom-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: block;
+    text-align: center;
+}
+
+.register-now .reg{
+    padding: 20%;
+}
+
+.footer{
+    padding: 40px 0;
+    background-color: var(--grey);
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover{
+    opacity: 0.9;
+}
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: blinker;
+}
+
+.footer ul li a{
+    color: #BFBFBF;
+    text-decoration: none;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover{
+    color: #fff;
+}
+
+.footer img{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    width: 150px;
+}
+
+.footer .copyright{
+   
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* HOME PAGE END */
+
+/* LEGENDS PAGE START*/
+.header{
+    background: url(image/legends/legends-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    margin-top: 6rem;
+    color: #fff;
+    text-align: center;
+    padding: 5rem;
+}
+
+.header h1{
+    padding-top: 2rem;
+    font-size: 60px;
+    line-height: 190%;
+}
+
+.header p{
+    font-family: blinker;
+    font-size: 25px;
+    width: 40%;
+    margin: auto;
+}
+
+.legends{
+    text-align: center;
+    background: url(image/legends/legends-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    padding-bottom: 100px;
+}
+
+.legends .grid-items{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.legends .grid-items:hover{
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.legends .card-header{
+    font-family: blinker;
+    font-size: 40px;
+    color: black;
+    font-weight: 900;
+}
+
+.legends .card-text{
+    font-family: blinker;
+    color: black;
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.legends .card-content{
+    padding: 0;
+    height: auto;
+}
+
+/* LEGENDS PAGE END */
+
+/* MAPS PAGE START */
+
+.mapHead{
+    background: url(image/maps/maps-header.jpg);
+    padding-top: 10vw;
+    display: flex;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.mapHead div{
+    text-align: center;
+    width: 30vw;
+    margin: 10vw;
+}
+
+.mapHead div #mapHeadTitle{
+    font-family: bungee;
+    color: #ffffff;
+    font-size: 3vw;
+    margin-bottom: -2vw;
+}
+
+.mapHead div #mapHeadText{
+    font-family: blinker;
+    color:#ffffff;
+    font-size: 2.3vw;
+}
+
+.arenaMapsHead{
+    background: url(image/legends/legends-bg.jpg);
+    display: grid;
+}
+
+.arenaMapsHead div h1{
+    font-size: 3vw;
+    text-align: center;
+}
+
+
+.arenaMap{
+  text-align: center;
+  background: url(image/legends/legends-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 6vw;
+  padding-top: 3vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.arenaMap .mapDivide{
+    background-color: #4a4a4a;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+}
+
+.mapImg{
+    display: block;
+    width: 100%;
+}
+
+.mapContent{
+    padding: 3rem;
+    padding-top: 2rem;
+    background-color: #4a4a4a;
+    padding-bottom: 7rem;
+    
+}
+
+.mapName{
+    line-height: 130%;
+    font-size: 2vw;
+    color: #fff;
+    margin-bottom: 3vw;
+}
+
+.mapDesc{
+    font-family: blinker;
+    font-size: 1.5vw;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    height: 96px;
+}
+
+
+.battleRoyaleHead{
+    background: url(image/maps/section-splitter.jpg);
+    display: flex;
+    width: 100%;
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    overflow-x: hidden;
+    /* margin-bottom: 100px; */
+}
+
+.battleRoyaleHead div img{
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 3.5vw;
+    margin-top: 3.5vw;
+}
+
+.battleRoyaleHead div h1{
+    color: #ffffff;
+    font-size: 3.5vw;
+    text-align: center;
+    margin-bottom: 6.5vw;
+}
+
+.battleRoyale{
+    text-align: center;
+    background: url(image/legends/legends-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 6vw;
+    padding-top: 3vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapContentBR{
+    padding: 3rem;
+    padding-top: 2rem;
+    background-color: #4a4a4a;
+    padding-bottom: 17rem;
+    
+}
+
+/* MAPS PAGE END */
+
+
+/* ABOUT PAGE START */
+
+.aboutHead{
+    padding-top: 7vw;
+    display: flex;
+    width: 100%;
+    background: url(image/about/header.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+
+.aboutHead div{
+    text-align: center;
+    width: 33.3vw;
+    margin: 10vw;
+}
+
+.aboutHead div img{
+    max-width: 100%;
+    height: 10vw;
+    display: block;
+    margin: 0 auto;
+}
+
+.aboutHead div h1{
+    padding-top: 2rem;
+    font-size: 2.5vw;
+    color: #ffffff;
+}
+
+.aboutHead div p{
+    color: #ffffff;
+    font-size: 1.5vw;
+    font-family: blinker;
+    font-weight: 550;
+}
+
+.about-btn{
+    display: inline-block;
+    border: 0.2vw solid #fff;
+    background: #ffffff00;
+    color: #ffffff;
+    font-family: blinker;
+    font-weight: 500;
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: .8rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 20px 10px rgba(0,0,0, .2);
+}
+
+.theLegends{
+    background-image: url(image/legends/legends-bg.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+
+.theLegends img{
+    height: auto;
+    width: 40vw;
+    margin-left: 2vw;
+    padding-right: 3vw;
+}
+
+.theLegendsMain {
+  width: 80%;
+  padding: 6vw 0px;
+  background-color: #4A4A4A;
+  margin-bottom: 6vw;
+  margin-top: 6vw;
+  background-size: 50%;
+  align-content: center;
+}
+
+.theLegendsMainCard {
+    width: 100vw;
+    max-width: 95%;
+    margin: 0, auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.theLegendsText{
+    width: 40vw;
+}
+
+.theLegendsText h2{
+    color: #ffffff;
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+    margin-left: 2.5vw;
+    
+}
+
+.theLegendsText p{
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-family: blinker;
+    line-height: 1.5vw;
+    font-size: 1.3vw;
+    margin-bottom: 3vw;
+    margin-left: 2.5vw;
+
+}
+.theLegendsText a{
+    font-size: 1vw;
+    margin-left: 2.5vw;
+}
+
+.textAbout{
+    background: url(image/about/text-bg.jpg);
+    display: flex;
+    justify-content: center;
+    background-size: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    padding-bottom: 6vw;
+}
+
+.textAbout h1{
+    font-size: 2.5vw;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.textAbout p{
+     font-family: blinker;
+     font-size: 1.5vw;
+     text-align: center;
+     line-height: 2.3vw;
+     margin: 2vw;
+     font-weight: 500;
+}
+
+.mapInfo{
+    text-align: center;
+    background: url(image/legends/legends-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 6vw;
+    padding-top: 3vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoImg{
+    display: block;
+    width: 100%;
+}
+
+.infoContent{
+    padding: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+}
+
+.mapInfo .divide-item{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.mapInfo .infoTitle{
+    font-family: blinker;
+    color: black;
+    font-weight: 900;
+    font-size: 2.5vw;
+    margin: 2vw;
+}
+
+.mapInfo .infoText{
+    font-family: blinker;
+    font-size: 1.5vw;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2.5rem;
+    height: 96px;
+
+}
+
+/* ABOUT PAGE END */
+
+
+/* REGISTER PAGE START */
+
+.regisContent {
+    background: url(image/about/text-bg.jpg);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    padding: 20px;
+    margin-top: 15vw;
+    margin-bottom: 5vw;
+    background-color: #4A4A4A;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.headRegis{
+    padding: 1vw 2vw;
+    border-bottom: 1px solid #4a4a4a;
+    /* margin-top: 2vw; */
+}
+
+.headRegis h2{
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.headRegis p{
+    font-family: blinker;
+    color: #fff;
+    text-align: center;
+}
+
+.form{
+    padding: 30px 40px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-control input{
+    border: 2px solid #fff;
+    border-radius: 4px;
+    display: block;
+    font-family: blinker;
+    font-size: 14px;
+    padding: 10px;
+    width: 90%;
+}
+
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control i{
+    position:absolute;
+    top: 58px;
+    right: 20px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control p{
+    font-family: blinker;
+    color: #BDBDBD;
+}
+
+.form-control small{
+    visibility: hidden;
+    font-family: blinker;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small{
+    color: #e74c3c;
+    visibility: visible;
+}    
+.form button{
+    align-items: center;
+    color: #fff;
+    display: block;
+    align-items: center;
+    font-family: inherit;
+    font-size: 16px;
+    margin-left: 5vw;
+}
+
+
+.btnRegis{
+    display: inline-block;
+    background: var(--red);
+    border-radius: .5rem;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: .8rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    opacity: 85%;
+    box-shadow: 0 20px 10px rgba(0,0,0, .2);
+}
+
+.btnRegis:hover{
+    opacity: 100%;
+    transform: translateY(-2%);
+}
+
+/* REGISTER PAGE END */
+
+
+@media (max-width: 878px){
+    .navbar{
+        padding: 0px;
+        padding-top: 1rem;
+        display: block;
+    }
+
+    .navbar.sticky{
+        padding: 0;
+        padding-top: 1rem;
+    }
+
+    .navbar .logo{
+        display: block;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar ul{
+        flex-wrap: wrap;
+    }
+    .navbar-toggle{
+        margin-right: 1rem;
+        display: block;
+    }
+    .navbar-links{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .mapContent{
+        padding-bottom: 2rem;
+    }
+    .mapContentBR{
+        padding-bottom: 2rem
+    }
+
+    .mapName{
+        font-size: 5vw;
+    }
+    .mapDesc{
+        font-size: 2.5vw;
+    }
+
+    .battleRoyaleHead div img{
+        max-width: 50%;
+    }
+
+    .battleRoyaleHead div h1{
+        font-size: 4vw;
+    }
+
+    .arenaMapsHead div h1{
+        font-size: 7vw;
+    }
+
+    .mapHead div #mapHeadTitle{
+        font-family: bungee;
+        color: #ffffff;
+        font-size: 4.3vw;
+        margin-bottom: -2vw;
+    }
+
+    .mapHead div{
+        width: 40vw;
+    }
+
+    .mapHead div #mapHeadText{
+        font-family: blinker;
+        color:#ffffff;
+        font-size: 3vw;
+    }
+
+    .mapHead div .btn{
+        font-size: 2.5vw;
+    }
+
+    .btn{
+        font-size: 2.5vw;
+    }
+
+    .infoContent{
+        padding-bottom: 0;
+    }
+
+    .mapInfo .infoTitle{
+        font-size: 6vw;
+    }
+
+    .mapInfo .infoText{
+        font-size: 3vw;
+        margin-bottom: 0;;
+    }
+
+    .textAbout h1{
+        font-size: 5vw;
+    }
+
+    .textAbout p{
+        font-size: 3.5vw;
+        line-height: 3vw;
+    }
+
+    .textAbout{
+        padding-bottom: 10vw;
+        background-size: 130%;
+    }
+
+    .theLegendsMainCard{
+        display: inline;
+        max-width: 100%;
+    }
+    .theLegendsMain{
+        width: 80%;
+    }
+
+    .theLegends img{
+        height: 40vw;
+        width: auto;
+        margin-left: 5vw;
+    }
+
+    .theLegendsText{
+        width: 70vw;
+    }
+
+    .theLegendsText h2{
+        text-align: center;
+        font-size: 5vw;
+        margin-left: 9vw;
+    }
+
+    .theLegendsText p{
+        font-size: 3vw;
+        line-height: 15px;
+        text-align: center;
+        margin-left: 9vw;
+    }
+
+    .theLegendsText a{
+        font-size: 3vw;
+        margin-left: 25vw;
+    }
+
+    .aboutHead div img{
+        height: 20vw;
+        margin-top: 20px;
+    }
+
+    .aboutHead div h1{
+        font-size: 5vw;
+    }
+
+    .aboutHead div p{
+        font-size: 3.5vw;
+    }
+
+    .about-btn{
+        font-size: 3vw;
+    }
+
+    .form button{
+        margin-left: 15vw;
+    }
+
+
+}
